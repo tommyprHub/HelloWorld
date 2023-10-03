@@ -2,6 +2,9 @@ package com.example.helloworld.firstapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.widget.AppCompatButton
+import androidx.appcompat.widget.AppCompatEditText
 import com.example.helloworld.R
 
 //esta es la parte lógica, toda parte lógica tiene su parte visual
@@ -12,5 +15,17 @@ class FirstAppActivity : AppCompatActivity() {
         //si quiero que algo se haga al principio lo haría aqui (al arrancar la pantalla)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_app)
+        val btnClick = findViewById<AppCompatButton>(R.id.btnClick)
+        val etname = findViewById<AppCompatEditText>(R.id.etname)
+
+
+
+        btnClick.setOnClickListener {
+            val name = etname.text.toString()
+            if(name.isNotEmpty()){
+                Log.i("Tommy","Boton pulsado $name")
+            }
+
+        }
     }
 }
