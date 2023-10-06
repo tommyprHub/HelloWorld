@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firstapp.UIActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glh1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glh2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glh3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <TextView
+        android:id="@+id/tvui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOLA"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:background="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@id/glh1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/glv1"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Hola e.t"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintBottom_toTopOf="@id/glh1"
+        app:layout_constraintStart_toEndOf="@id/glv1"
+        app:layout_constraintEnd_toStartOf="@id/glv2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btnUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pulsa"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toTopOf="@id/glh1"
+        app:layout_constraintStart_toEndOf="@id/glv2"
+        app:layout_constraintEnd_toStartOf="@id/glv3"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_launcher_foreground"/> -->
+
+    <ToggleButton
+        android:id="@+id/tglbtnUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/glh1"
+        app:layout_constraintStart_toStartOf="@id/glv3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RadioButton
+        android:id="@+id/rdbtnUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/glh2"
+        app:layout_constraintEnd_toStartOf="@id/glv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/glh1"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

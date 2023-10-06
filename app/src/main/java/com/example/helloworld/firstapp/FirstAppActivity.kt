@@ -1,5 +1,6 @@
 package com.example.helloworld.firstapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,15 +18,25 @@ class FirstAppActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first_app)
         val btnClick = findViewById<AppCompatButton>(R.id.btnClick)
         val etname = findViewById<AppCompatEditText>(R.id.etname)
-
+        val btnUI = findViewById<AppCompatButton>(R.id.botonUI)
 
 
         btnClick.setOnClickListener {
             val name = etname.text.toString()
-            if(name.isNotEmpty()){
-                Log.i("Tommy","Boton pulsado $name")
-            }
 
+            if(name.isNotEmpty()){
+                //Log.i("Tommy","Boton pulsado $name")
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("EXTRA_NAME",name)
+                startActivity(intent)
+
+            }
+        }
+
+        btnUI.setOnClickListener{
+            val intent2 = Intent(this, UIActivity::class.java) //(donde estoy, donde quiero ir)
+            navigateUpTo(intent2)
+            startActivity(intent2)
         }
     }
 }
