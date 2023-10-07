@@ -48,8 +48,8 @@
         android:id="@+id/tvui"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOLA"
-        android:textSize="20dp"
+        android:text="@string/saludo"
+        android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@color/teal_700"
         app:layout_constraintBottom_toTopOf="@id/glh1"
@@ -61,8 +61,10 @@
         android:id="@+id/etUI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Hola e.t"
+        android:textSize="20sp"
+        android:hint="@string/etUI"
+        android:inputType="text"
+        android:autofillHints="name"
         app:layout_constraintVertical_bias="0.8"
         app:layout_constraintBottom_toTopOf="@id/glh1"
         app:layout_constraintStart_toEndOf="@id/glv1"
@@ -73,7 +75,7 @@
         android:id="@+id/btnUI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pulsa"
+        android:text="@string/pulsacion"
         app:layout_constraintVertical_bias="0.2"
         app:layout_constraintBottom_toTopOf="@id/glh1"
         app:layout_constraintStart_toEndOf="@id/glv2"
@@ -104,6 +106,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/glh1"
         />
+
+    <RadioGroup
+        android:id="@+id/rgUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/glh2"
+        app:layout_constraintEnd_toStartOf="@id/glv2"
+        app:layout_constraintStart_toEndOf="@id/glv1"
+        app:layout_constraintTop_toBottomOf="@id/glh1" />
+
+
+    <CheckBox
+        android:id="@+id/cbUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/glh2"
+        app:layout_constraintEnd_toStartOf="@id/glv2"
+        app:layout_constraintStart_toEndOf="@id/glv1"
+        app:layout_constraintTop_toBottomOf="@id/glh1"/>
+
+    <ProgressBar
+        android:id="@+id/pbUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toTopOf="@id/glh2"
+        app:layout_constraintEnd_toStartOf="@id/glv3"
+        app:layout_constraintStart_toEndOf="@id/glv2"
+        app:layout_constraintTop_toBottomOf="@id/glh1"/>
+
+    <!--<androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/glh2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glv3"
+        app:layout_constraintTop_toBottomOf="@id/glh1"
+        app:layout_constraintVertical_bias="0.8"
+        />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
