@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">HelloWorld</string>
     <string name="etUI">Hola e.t</string>
-    <string name="saludo">HOLA</string>
-    <string name="pulsacion">pulsa</string>
+    <string name="saludo">Hola usuario</string>
+    <string name="pulsacion">ACEPTAR</string>
+    <string name="nombre">Escribe aquí nombre</string>
+    <string name="RStxt">Aquí aparecerá el nombre</string>
 </resources>
