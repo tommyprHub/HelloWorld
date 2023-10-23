@@ -5,4 +5,5 @@
     <string name="pulsacion">ACEPTAR</string>
     <string name="nombre">Escribe aquí nombre</string>
     <string name="RStxt">Aquí aparecerá el nombre</string>
+    <string name="volver"> volver</string>
 </resources>
